@@ -3,7 +3,10 @@
         "target": "ESNext",
         "useDefineForClassFields": true,
         "module": "ESNext",
-        "lib": ["ESNext", "DOM"],
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
         "moduleResolution": "Node",
         "strict": true,
         "resolveJsonModule": true,
@@ -14,8 +17,13 @@
         "noUnusedParameters": true,
         "noImplicitReturns": true,
         "skipLibCheck": true,
-        "types": ["vite/client"],
-        "experimentalDecorators": true,
+        "types": [
+            "vite/client"
+        ],
+        "experimentalDecorators": true
     },
-    "include": ["src", "src/app.routing.ts"]
+    "angularCompilerOptions": {
+        "strictTemplates": true
+    },
+    "include": ["src/**/*.ts"]
 }
