@@ -1,4 +1,5 @@
-import { Route, provideRouter } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Route, RouterModule } from '@angular/router';
 
 const routes: Route[] = [
     {
@@ -11,6 +12,8 @@ const routes: Route[] = [
     }
 ];
 
-export const appRouting = [
-    provideRouter(routes)
-]
+@NgModule({
+    imports: [ RouterModule.forRoot(routes) ],
+    exports: [ RouterModule ]
+})
+export class AppRoutingModule { }

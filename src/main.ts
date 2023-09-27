@@ -1,9 +1,9 @@
 import "@angular/compiler";
 import "zone.js";
 
-import { bootstrapApplication } from '@angular/platform-browser';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { AppComponent } from './app/app.component';
-import { appRouting } from "./app/app.routing";
+import { AppModule } from './app/app.module';
 
-bootstrapApplication(AppComponent, {providers: [...appRouting]});
+platformBrowserDynamic().bootstrapModule(AppModule) // Inicia la aplicación con AppModule
+  .catch(err => console.error(err));
